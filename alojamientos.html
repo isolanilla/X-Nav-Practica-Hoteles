@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!--
+    Simple view of accomodations in Madrid
+-->
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title>Accomodations in Madrid</title>
+
+    <link href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" rel="stylesheet">
+    <link href="alojamientos.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"> </script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"> </script>
+
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript" src="jquery-ui.js"></script>
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+
+    <script type="text/javascript" src="alojamientos.js"></script>
+  </head>
+
+  <body>
+    <div id="banner"> <img src="images/banner.jpg" class="img-responsive" alt="Imagen responsive"> </div>
+
+      <button class="up" id="get">Obtener Hoteles</button>
+      <button id="load" class="up">Cargar colecciones</button>
+      <button id="save" class="up">Guardar colecciones</button>
+
+
+      <div id="formSave" hidden>
+        Token: <input id="token" type="text" name="token" >
+        Repo: <input id="repo" type="text" name="Repo" >
+        Ususario: <input id="usuario" type="text" name="Repo" >
+        <input type="submit" onclick='save_git()'value="Enviar">
+      </div>
+
+      <div id="formLoad" hidden>
+        URL: <input id="url" type="text" name="Url" >
+        <input type="submit" onclick='save_git()'value="Enviar">
+      </div>
+
+
+    <div id="tabs">
+      <ul>
+        <li><a href="#tabs-1">Pagina Principal</a></li>
+        <li><a href="#tabs-2">Colleciones</a></li>
+        <li><a href="#tabs-3">Alojados</a></li>
+      </ul>
+      <div id="tabs-1">
+        <div class ="row">
+          <br></br>
+          <div id="map" class="col-md-6 col-xs-12"></div>
+          <div id="list" class="col-md-6 col-xs-12"></div>
+          <div class="col-md-12 col-xs-12" id="desc" style="display:none"></div>
+        </div>
+
+      </div>
+
+      <div id ="tabs-2">
+        <div id="list2" class="col-md-3 col-xs-6"></div>
+        <div id="form" class="col-md-3 col-xs-6" >
+
+            Nombre Colección : <input id="formColeccion" type="text" name="colección">
+            <input type="button" onclick="submitColeccion()" value="Enviar">
+
+          <div id="listColecciones" class="scroll" hidden></div>
+        </div>
+        <div id="droppable" class="col-md-3 col-xs-6 scroll" hidden></div>
+      </div>
+
+      <div id ="tabs-3">
+        <p>HOLA A TODos pero de alojados</p>
+      </div>
+
+  </body>
+</html>

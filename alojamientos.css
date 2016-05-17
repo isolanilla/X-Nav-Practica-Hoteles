@@ -1,0 +1,51 @@
+
+body{
+  background: url("images/body.jpg")
+}
+#map {
+  height: 500px;
+  position:static;
+}
+
+div #tabs-2{
+    height: 600px;
+}
+#imgInfo{
+  margin: 8px 8px 8px 8px;
+
+}
+#listColecciones{
+  margin: 8px 8px 8px 8px;
+
+}
+
+
+button.up{
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  font-size: 16px;
+}
+button.del{
+  background-color: red;
+  font:stronger;
+}
+.imgCarrousel{
+  margin-left: 11%;
+}
+#desc{
+  margin-top:4px;
+  border-style: solid;
+  height:450px;
+}
+
+div.scroll {
+  height: 500px;
+  border-style: solid;
+  overflow: scroll;
+  position:static;
+}
+
+div.listHotel{
+  border-style: solid;
+}
