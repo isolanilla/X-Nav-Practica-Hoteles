@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
     <title>Accomodations in Madrid</title>
-
+     <script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
     <link href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" rel="stylesheet">
     <link href="alojamientos.css" rel="stylesheet">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
@@ -20,6 +20,7 @@
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
     <script type="text/javascript" src="jquery-ui.js"></script>
+    <script type="text/javascript" src="github.js"></script>
     <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
 
     <script type="text/javascript" src="alojamientos.js"></script>
@@ -37,12 +38,13 @@
         Token: <input id="token" type="text" name="token" >
         Repo: <input id="repo" type="text" name="Repo" >
         Ususario: <input id="usuario" type="text" name="Repo" >
+        Fichero: <input id="fich" type="text" name="Repo" >
         <input type="submit" onclick='save_git()'value="Enviar">
       </div>
 
       <div id="formLoad" hidden>
         URL: <input id="url" type="text" name="Url" >
-        <input type="submit" onclick='save_git()'value="Enviar">
+        <input type="submit" onclick='load_git()'value="Enviar">
       </div>
 
 
@@ -56,8 +58,9 @@
         <div class ="row">
           <br></br>
           <div id="map" class="col-md-6 col-xs-12"></div>
-          <div id="list" class="col-md-6 col-xs-12"></div>
-          <div class="col-md-12 col-xs-12" id="desc" style="display:none"></div>
+          <div id="list" class="col-md-3 col-xs-6"></div>
+          <div id="listSelCol" class="col-md-3 col-xs-6" style="display:none"></div>
+          <div id="desc" class="col-md-12 col-xs-12"  style="display:none"></div>
         </div>
 
       </div>
@@ -71,11 +74,20 @@
 
           <div id="listColecciones" class="scroll" hidden></div>
         </div>
-        <div id="droppable" class="col-md-3 col-xs-6 scroll" hidden></div>
+        <div id="droppable" class="col-md-3 col-xs-6 scroll" hidden>
+
+        </div>
       </div>
 
       <div id ="tabs-3">
-        <p>HOLA A TODos pero de alojados</p>
+        <div class="row">
+          <div class="col-md-6 col-xs-12" style="border-style:solid" id="infohotel"> </div>
+          <div id="formGoogle" >
+            ID-Google: <input id="idGoogle" type="text" name="idGoogle" >
+            <input type="submit" onclick='sendGoogle()'value="Enviar">
+          </div>
+          <div id="google" style="border-style:solid" class="col-md-6 col-xs-12"></div>
+        </div>
       </div>
 
   </body>

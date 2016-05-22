@@ -10,6 +10,11 @@ body{
 div #tabs-2{
     height: 600px;
 }
+
+div #tabs-3{
+    height: 600px;
+}
+
 #imgInfo{
   margin: 8px 8px 8px 8px;
 
@@ -17,6 +22,11 @@ div #tabs-2{
 #listColecciones{
   margin: 8px 8px 8px 8px;
 
+}
+
+div #listSelCol{
+
+  border-style:solid;
 }
 
 
@@ -35,7 +45,7 @@ button.del{
 }
 #desc{
   margin-top:4px;
-  border-style: solid;
+  border-style:solid;
   height:450px;
 }
 
