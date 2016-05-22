@@ -203,7 +203,7 @@ function save_git(){
   dgeneral["google"] = google
   var github =  new Github({token:token,auth: "oauth"});
   var repo = github.getRepo(usuario, repo);
-  repo.write('master', nombreFichero, JSON.stringify(dgeneral), 'colecciones', function(err) {});
+  repo.write('gh-pages', nombreFichero, JSON.stringify(dgeneral), 'colecciones', function(err) {});
   $("#formSave").hide()
 
 
